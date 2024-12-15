@@ -68,7 +68,7 @@ element.send_keys "1226"
 element = driver.find_element :id => "tb_comments"
 element.send_keys "No comments"
 
-sleep 5
+sleep 1
 element = driver.find_element :id => "Button1"
 element.click
 
@@ -78,11 +78,11 @@ puts "Test Passed: Form successfully completed!" if wait.until {
 	element if element.displayed?
 }
 
-sleep 5
+sleep 1
 
 puts "Test Passed!" if wait.until {
     /Your registration was successfully completed!/.match(driver.page_source)
 }
 
-sleep 5
+sleep 1
 driver.quit
